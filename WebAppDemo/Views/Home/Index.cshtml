@@ -1,0 +1,28 @@
+﻿@using QuickTranslationPack;
+@using Newtonsoft.Json;
+
+@{
+	var text = QuickTranslation.Prepare(@"
+		# Header.
+		Title: Home Page
+		- fr: Page d'accueil
+		Welcome: Welcome {0},
+		- fr: Bonjour {0},
+
+		# Toggle language.
+		Toggle_lang_desc: Changer à français
+		- fr: Switch to english
+		Toggle_lang_code: fr
+		- fr: en
+	");
+
+	ViewData["Title"] = text["Title"];
+}
+
+<h1>@string.Format(text["Welcome"], "User1")</h1>
+<pre>@JsonConvert.SerializeObject(text.GetTranslations(), Formatting.Indented)</pre>
+
+<p>@Html.ActionLink(text["Toggle_lang_desc"], "Index", new { lang = text["Toggle_lang_code"] })</p>
+
+<p>@ViewBag.Message</p>
+
