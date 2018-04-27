@@ -8,7 +8,7 @@ Not published yet. (soon!)
 
 ## Basic usage
 
-```
+```csharp
 var text = QuickTranslation.Prepare(@"
 	# Comment.
 	010: english1
@@ -32,22 +32,25 @@ Assert.AreEqual("english3", text["030"]);
 
 ## Embed in controller
 
-```
-static QuickTranslation Translations = QuickTranslation.Prepare(@"
-	MESSAGE_001: This is a message from the controller.
-		- fr: Ceci est un message du contrôleur.
-");
-
-public IActionResult Index()
+```csharp
+public class HomeController : Controller
 {
-	ViewBag.Message = Translations["MESSAGE_001"];
-	return View();
+	static QuickTranslation Translations = QuickTranslation.Prepare(@"
+		MESSAGE_001: This is a message from the controller.
+			- fr: Ceci est un message du contrôleur.
+	");
+
+	public IActionResult Index()
+	{
+		ViewBag.Message = Translations["MESSAGE_001"];
+		return View();
+	}
 }
 ```
 
-
 ## Embed in view (.cshtml)
-```
+
+```csharp
 @using QuickTranslationPack;
 @using Newtonsoft.Json;
 
