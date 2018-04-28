@@ -1,0 +1,14 @@
+language: csharp
+solution: QuickTranslation.sln
+mono: none
+dotnet: 2.0.0
+os:
+  - linux
+env:
+  global:
+    - DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+    - DOTNET_CLI_TELEMETRY_OPTOUT: 1
+script:
+  - dotnet restore
+  - dotnet build -f netcoreapp2.0 src/Tests/
+  - dotnet test Tests/Tests.csproj
