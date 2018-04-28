@@ -1,7 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-  </PropertyGroup>
-
+	<PropertyGroup>
+		<Title>QuickTranslation</Title>
+		<Description>Embeddable translation in code, views, controllers, etc.</Description>
+		<AssemblyTitle>QuickTranslation</AssemblyTitle>
+		<VersionPrefix>1.0.0</VersionPrefix>
+		<AssemblyName>QuickTranslation</AssemblyName>
+		<TargetFrameworks>net45;netcoreapp2.0</TargetFrameworks>
+		<PackageId>QuickTranslation</PackageId>
+		<Authors>doxakis</Authors>
+		<PackageTags>Localization</PackageTags>
+		<PackageProjectUrl>https://github.com/doxakis/QuickTranslation</PackageProjectUrl>
+		<PackageLicenseUrl>https://github.com/doxakis/QuickTranslation/blob/master/LICENSE</PackageLicenseUrl>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/doxakis/QuickTranslation</RepositoryUrl>
+	</PropertyGroup>
 </Project>

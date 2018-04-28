@@ -2,7 +2,10 @@
 Embeddable translation in code, views, controllers, etc.
 
 # Install from Nuget
-Not published yet. (soon!)
+To get the latest version:
+```
+Install-Package QuickTranslation
+```
 
 # Examples
 
