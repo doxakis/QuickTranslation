@@ -1,4 +1,4 @@
-# QuickTranslation
+# QuickTranslation [![Build Status](https://travis-ci.org/doxakis/QuickTranslation.svg?branch=master)](https://travis-ci.org/doxakis/QuickTranslation) [![NuGet Status](https://badge.fury.io/nu/QuickTranslation.svg)](https://www.nuget.org/packages/QuickTranslation)
 Embeddable translation in code, views, controllers, etc.
 
 # Install from Nuget
